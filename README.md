@@ -1,4 +1,4 @@
-#React + TypeScript + Vite
+# React + TypeScript + Vite
 Bu şablon, React'i Vite ile çalıştırmak için minimal bir kurulum sağlar ve HMR (Hot Module Replacement) ile bazı ESLint kurallarını içerir.
 
 Şu anda iki resmi eklenti mevcuttur:
