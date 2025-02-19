@@ -1,17 +1,14 @@
-# React + TypeScript + Vite
+React + TypeScript + Vite
+Bu şablon, React'i Vite ile çalıştırmak için minimal bir kurulum sağlar ve HMR (Hot Module Replacement) ile bazı ESLint kurallarını içerir.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Şu anda iki resmi eklenti mevcuttur:
 
-Currently, two official plugins are available:
+@vitejs/plugin-react, Hızlı Yenileme (Fast Refresh) için Babel kullanır.
+@vitejs/plugin-react-swc ise Hızlı Yenileme için SWC kullanır.
+ESLint yapılandırmasını genişletme
+Eğer bir üretim uygulaması geliştiriyorsanız, yapılandırmayı güncelleyerek tür (type) farkındalığı olan lint kurallarını etkinleştirmenizi öneririz:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+Üst düzey parserOptions ayarlarını şu şekilde yapılandırın:
 
 ```js
 export default tseslint.config({
@@ -25,9 +22,9 @@ export default tseslint.config({
 })
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+-tseslint.configs.recommended ayarını tseslint.configs.recommendedTypeChecked veya tseslint.configs.strictTypeChecked ile değiştirin.
+-İsteğe bağlı olarak ...tseslint.configs.stylisticTypeChecked ekleyin.
+-eslint-plugin-react eklentisini yükleyin ve yapılandırmayı güncelleyin:
 
 ```js
 // eslint.config.js
